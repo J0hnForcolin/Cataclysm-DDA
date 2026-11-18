@@ -37,7 +37,7 @@
     "id": "TALK_BULLET_EXCHANGE_INFO",
     "type": "talk_topic",
     "//": "this is all the dialogue related to converting bullets with Jay",
-    "dynamic_line": "You hit the nail on the head.  You bring me cartridges of one type, and I reload them into another.  Ammo has its own exchange rate, for example, you can exchange a hundred rifle rounds for three hundred pistol rounds or vice versa.",
+    "dynamic_line": "You hit the nail on the head.  You bring me a hundred cartridges of one type, and I reload them into another.  Ammo has its own exchange rate, for example, you can exchange one hundred 9mm JHP for about fifty 12 gauge buckshots, off the top of my head.  Of course, different types of ammo of the same caliber have different values - we can check the rates together whenever you wanna convert.",
     "responses": [
       { "text": "Can we do that now?", "topic": "TALK_GUNSMITH_CONVERT_FROM_TYPE" },
       { "text": "Thanks for filling me in.", "topic": "TALK_GUNSMITH_SERVICES" }
@@ -48,7 +48,7 @@
     "type": "talk_topic",
     "dynamic_line": {
       "concatenate": [
-        "Alright.  So, first you give me your rounds, I'll put them on your account, and then I can reload them in another caliber of your choice.  What ammo do you want to convert?",
+        "Alright.  So, first you give me your rounds, I'll put them on your account, and then I can reload them in another caliber of your choice. <color_yellow>Only stacks of a hundred bullets of the same type are accepted</color>, please and thank you.  What ammo do you want to convert?",
         {
           "math": [ "u_number_artisans_gunsmith_credit != 0" ],
           "yes": "\n\n[Your credit: $<u_val:number_artisans_gunsmith_credit>]"
