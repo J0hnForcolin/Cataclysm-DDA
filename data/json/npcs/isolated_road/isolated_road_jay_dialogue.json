@@ -98,7 +98,10 @@
     "id": "TALK_GUNSMITH_RESTOCK",
     "type": "talk_topic",
     "dynamic_line": "Next series of currency gotta be ready around <restock_time_point>, fresh off the print!",
-    "responses": [ { "text": "I'll make sure to take a look.  <end_talking_bye>", "topic": "TALK_DONE" } ]
+    "responses": [
+      { "text": "Good to hear.", "topic": "TALK_GUNSMITH_SERVICES" },
+      { "text": "I'll make sure to take a look.  <end_talking_bye>", "topic": "TALK_DONE" }
+    ]
   },
   {
     "id": "TALK_GUNSMITH_SHOP_ABOUT",
@@ -112,13 +115,19 @@
   {
     "id": "TALK_GUNSMITH_SHOP_ABOUT_MORE",
     "type": "talk_topic",
-    "dynamic_line": "Pretty simple stuff, bud.  I barter in pre-shitshow ammo, and to stimulate the growing economy, I print and issue more.  I take your goods - Cody would call it labor - and exchange it for the new universal currency.  If you want to convert currency I'm happy to facilitate, but it'll take a few days and there is a service charge.",
+    "dynamic_line": "Pretty simple stuff, bud.  I barter in pre-shitshow ammo, and to stimulate the growing economy, I print and issue more.  I take your goods - Cody would call it labor - and exchange it for the new universal currency.  If you want to convert currency I'm happy to facilitate, but it'll take a few days and there is a service charge.  Also, <color_yellow>I only take in stacks of a hundred bullets of the same type at a time</color>.  Having to deal with three hundred rounds of twenty different calibers is too big a pain in the ass, I've tried.",
     "speaker_effect": { "effect": { "u_add_var": "dialogue_artisans_gunsmith_knows_about_conversion", "value": "yes" } },
     "responses": [
-      { "text": "So you're really going all in on this bank thing?", "topic": "TALK_GUNSMITH_SERVICES" },
+      { "text": "So you're really going all in on this bank thing?", "topic": "TALK_GUNSMITH_SHOP_ABOUT_END" },
       { "text": "So you'll exchange bullets for other bullets directly?", "topic": "TALK_BULLET_EXCHANGE_INFO" },
       { "text": "…", "topic": "TALK_GUNSMITH_SERVICES" }
     ]
+  },
+  {
+    "id": "TALK_GUNSMITH_SHOP_ABOUT_END",
+    "type": "talk_topic",
+    "dynamic_line": "I dunno, friend, what do you think?  Take a look around you and see for yourself.",
+    "responses": [ { "text": "Well, fair enough.", "topic": "TALK_GUNSMITH_SERVICES" } ]
   },
   {
     "id": "TALK_GUNSMITH_ABOUT",
